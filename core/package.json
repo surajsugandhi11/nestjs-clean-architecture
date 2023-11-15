@@ -1,0 +1,29 @@
+{
+  "name": "@delivery/core",
+  "version": "0.0.3",
+  "description": "DeliveryCore",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "test": "  echo \"Error: no test specified\" && exit 1",
+    "cleanWin": "del ./build",
+    "clean": "del ./build/*",
+    "build": "del ./build/* && tsc",
+    "gitpubdevv2": "git add . && git commit -m 'updated' && git push && npm run build",
+    "gitpubdevv2s": "git add . && git commit -m 'updated' && git push origin dev_v2 && npm run build",
+    "pubdevv2": "npm version patch && npm publish",
+    "wingitpub": "git add . && git commit -m 'updated' && git push origin master && npm run build",
+    "gitpubbank": "git add . && git commit -m 'updated' && git push orgin feat/tj/bankbbps && npm run build",
+    "pubbank": "npm version patch && npm publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "del-cli": "^4.0.0",
+    "typescript": "^4.7.4"
+  }
+}

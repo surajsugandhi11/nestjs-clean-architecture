@@ -1,0 +1,39 @@
+{
+  "name": "@delivery/data",
+  "version": "0.0.5",
+  "description": "DeliveryData",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "test": "  echo \"Error: no test specified\" && exit 1",
+    "cleanWin": "del ./build",
+    "clean": "del ./build/*",
+    "build": "del ./build/* && tsc",
+    "gitpubdevv2": "git add . && git commit -m 'updated' && git push && npm run build",
+    "gitpubdevv2s": "git add . && git commit -m 'updated' && git push origin dev_v2 && npm run build",
+    "pubdevv2": "npm version patch && npm publish",
+    "wingitpub": "git add . && git commit -m 'updated' && git push origin master && npm run build",
+    "gitpubbank": "git add . && git commit -m 'updated' && git push orgin feat/tj/bankbbps && npm run build",
+    "pubbank": "npm version patch && npm publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@delivery/core": "file:../core",
+    "@nestjs/common": "^10.2.8",
+    "@nestjs/core": "^10.2.8",
+    "@types/node": "^20.9.0",
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1",
+    "typeorm": "^0.3.17"
+  },
+  "devDependencies": {
+    "del-cli": "^4.0.0",
+    "typescript": "^5.2.2"
+  }
+}
